@@ -1,8 +1,11 @@
 package io.khasang.ba.config;
 
 import io.khasang.ba.dao.CatDao;
+import io.khasang.ba.dao.TicketDao;
 import io.khasang.ba.dao.impl.CatDaoImpl;
+import io.khasang.ba.dao.impl.TicketDaoImpl;
 import io.khasang.ba.entity.Cat;
+import io.khasang.ba.entity.Ticket;
 import io.khasang.ba.service.CreateTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -56,5 +59,10 @@ public class AppConfig {
     @Bean
     public CatDao catDao() {
         return new CatDaoImpl(Cat.class);
+    }
+
+    @Bean
+    public TicketDao ticketDao() {
+        return new TicketDaoImpl(Ticket.class);
     }
 }
