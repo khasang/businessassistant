@@ -26,19 +26,24 @@ public class AppController {
 
     // localhost:8080/
     @RequestMapping("/")
-    public String getHelloPage(Model model){
+    public String getHelloPage(Model model) {
         model.addAttribute("name", myService.getName());
         return "home";
     }
 
     @RequestMapping("/catinfo")
-    public String getHelloPage(){
+    public String getHelloPage() {
         return "cat";
+    }
+
+    @RequestMapping("/ticketinfo")
+    public String getTicketInfoPage() {
+        return "ticket";
     }
 
     // localhost:8080/name/asdasd
     @RequestMapping("/name/{name}")
-    public String getName(@PathVariable("name") String name, Model model){
+    public String getName(@PathVariable("name") String name, Model model) {
         model.addAttribute("name", name);
         return "hello";
     }
