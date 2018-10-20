@@ -141,8 +141,8 @@
         <td>/ticket/add</td>
         <td>
             <form class="form-inline">
-                dateOfIssue: <input id="postDateOfIssue" value="default date of issue">
-                dateOfIssue: <input id="postSeries" value="default series">
+                Date Of Issue: <input id="postDateOfIssue" value="default date of issue">
+                Series: <input id="postSeries" value="default series">
                 <button type="button" onclick="RestPost($('#postDateOfIssue').val(), $('#postSeries').val())">try
                 </button>
             </form>
@@ -155,8 +155,8 @@
         <td>
             <form class="form-inline">
                 id: <input id="inputId" value="">
-                dateOfIssue: <input id="putDateOfIssue" value="default date of issue">
-                dateOfIssue: <input id="putSeries" value="default series">
+                Date Of Issue: <input id="putDateOfIssue" value="default date of issue">
+                Series: <input id="putSeries" value="default series">
                 <button type="button"
                         onclick="RestPut($('#inputId').val(), $('#putDateOfIssue').val(),$('#putSeries').val())">try
                 </button>
