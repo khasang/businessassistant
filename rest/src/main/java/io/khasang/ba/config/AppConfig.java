@@ -97,11 +97,6 @@ public class AppConfig {
     }
 
     @Bean
-    public AddressDao addressDao() {
-        return new AddressDaoImpl(Address.class);
-    }
-
-    @Bean
     public CategoryDao categoryDao() {
         return new CategoryDaoImpl(Category.class);
     }
@@ -109,5 +104,10 @@ public class AppConfig {
     @Bean
     public CustomerRequestStageDao customerRequestStageDao() {
         return new CustomerRequestStageDaoImpl(CustomerRequestStage.class);
+    }
+
+    @Bean
+    public CustomerRequestStageNameDao customerRequestStageNameDao() {
+        return new CustomerRequestStageNameDaoImpl(CustomerRequestStageName.class);
     }
 }
